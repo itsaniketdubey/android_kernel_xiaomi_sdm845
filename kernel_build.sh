@@ -67,14 +67,24 @@ build_config() {
 # only use after runing build_setup()
 build_kernel() {
 
+	make O=out $DEFCONFIG -j$(nproc --all)
     BUILD_START=$(date +"%s")
+	echo $TC_DIR
     make -j$(nproc --all) O=out \
-                PATH="$TC_DIR/arm64/bin:$TC_DIR/arm/bin:$PATH" \
-                CROSS_COMPILE=$TC_DIR/arm64/bin/aarch64-elf- \
-                CROSS_COMPILE_ARM32=$TC_DIR/arm/bin/arm-eabi- |& tee $LOG
+                PATH="$TC_DIR/bin:$PATH" \
+                CC="clang" \
+                CROSS_COMPILE=$TC_DIR/bin/aarch64-linux-gnu- \
+                CROSS_COMPILE_ARM32=$TC_DIR/bin/arm-linux-gnueabi- \
+                LLVM=llvm- \
+                AR=llvm-ar \
+                NM=llvm-nm \
+                OBJCOPY=llvm-objcopy \
+                OBJDUMP=llvm-objdump \
+                STRIP=llvm-strip |& tee $LOG
 
     BUILD_END=$(date +"%s")
     DIFF=$((BUILD_END - BUILD_START))
+
 }
 
 # build_end - creates and sends zip
