@@ -12,7 +12,7 @@ KERNELNAME="6e6f6f62"
 KERNEL_DIR="$CURRENT_DIR"
 AK_REPO="https://github.com/sajidshahriar72543/AnyKernel3"
 AK_DIR="$HOME/AnyKernel3"
-TC_DIR="$HOME"
+TC_DIR="$HOME/proton-clang"
 # End Config
 
 # clone_tc - clones proton clang to TC_DIR
