@@ -10,6 +10,6 @@ steps:
      CHAT_ID:
        from_secret: CHAT_ID
    commands:
-      - apt-get -y update && apt-get -y upgrade && apt-get -y install git libxml2
+      - apt-get -y update && apt-get -y upgrade && apt-get -y install git libxml2 && apt-get -y install gcc-arm-linux-gnueabi
       - cd /drone/src
       - bash kernel_setup.sh
