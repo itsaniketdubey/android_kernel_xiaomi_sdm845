@@ -8,7 +8,7 @@
 
 # Config
 CURRENT_DIR="$(pwd)"
-KERNELNAME="Optimus_Drunk_Beryllium"
+KERNELNAME="Futurebound"
 KERNEL_DIR="$CURRENT_DIR"
 AK_REPO="https://github.com/itsaniketdubey/AnyKernel3"
 AK_DIR="$HOME/AnyKernel3"
