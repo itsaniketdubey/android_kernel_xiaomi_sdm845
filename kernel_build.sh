@@ -13,7 +13,7 @@ LOG="$HOME/log.txt"
 ARCH="arm64"
 SUBARCH="arm64"
 export ARCH SUBARCH
-export KBUILD_BUILD_USER=6e6f6f62
+export KBUILD_BUILD_USER=Blaz1keN
 export KBUILD_BUILD_HOST=DroneCI
 export TZ='IST'
 
