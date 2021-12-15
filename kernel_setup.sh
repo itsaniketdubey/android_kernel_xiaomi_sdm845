@@ -8,9 +8,9 @@
 
 # Config
 CURRENT_DIR="$(pwd)"
-KERNELNAME="6e6f6f62"
+KERNELNAME="Optimus_Drunk_Beryllium"
 KERNEL_DIR="$CURRENT_DIR"
-AK_REPO="https://github.com/sajidshahriar72543/AnyKernel3"
+AK_REPO="https://github.com/itsaniketdubey/AnyKernel3"
 AK_DIR="$HOME/AnyKernel3"
 TC_DIR="$HOME/proton-clang"
 # End Config
