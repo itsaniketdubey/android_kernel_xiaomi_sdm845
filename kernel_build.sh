@@ -8,7 +8,6 @@
 DEVICE="beryllium"
 DEFCONFIG="${DEVICE}_defconfig"
 LOG="$HOME/log.txt"
-VERSION="11.33"
 
 # Export arch and subarch
 ARCH="arm64"
