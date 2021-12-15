@@ -100,7 +100,7 @@ build_end() {
 	cd "$AK_DIR" || echo -e "\nAnykernel directory ($AK_DIR) does not exist" || exit 1
 	git clean -fd
 	mv "$KERNEL_IMG" "$AK_DIR"/zImage
-	ZIP_NAME=${KERNELNAME}_${COMMIT_SHA}_${1}_$(date +%H%M).zip
+	ZIP_NAME=${KERNELNAME}_${1}_$(date +%H%M).zip
 	zip -r9 "$ZIP_NAME" ./* -x .git README.md ./*placeholder
 
 	tg_pushzip "$ZIP_NAME" "Time taken: <code>$((DIFF / 60))m $((DIFF % 60))s</code>"
